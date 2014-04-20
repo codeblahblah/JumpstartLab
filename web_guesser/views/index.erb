@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title></title>
+    <style>
+      body {
+        background: <%= set_color(message) %>;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type='text' name='guess' />
+      <input type='submit' value='Guess!' />
+    </form>
+    <p>
+      <%= message %>
+    </p>
+    <p>
+      You have <%= number_of_guesses %> <%= number_of_guesses > 1 ? 'guesses' : 'guess' %> left.
+    </p>
+      <%= show_secret_number if cheat_mode %>
+  </body>
+</html>
+
+
+
