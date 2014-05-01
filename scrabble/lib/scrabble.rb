@@ -21,10 +21,16 @@ LETTER_SCORE = {
       h[word] = score_word(word)
       h
     end
-    sorted_score_hash = score_hash.sort_by { |k,v| v}
+    sorted_score_hash = score_hash.sort_by { |k,v| v }
+
     highest_scoring_pair = sorted_score_hash.last
+    highest_scoring_word = highest_scoring_pair.first
     highest_score = highest_scoring_pair.last
-    highest_scoring_pair.first
+
+    first_highest_scoring_word = score_hash.find { |k,v| v == highest_score}
+
+    return first_highest_scoring_word.first if first_highest_scoring_word.first.length == highest_scoring_word.length
+    highest_scoring_word
   end
 
   private
