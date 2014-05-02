@@ -17,17 +17,16 @@ LETTER_SCORE = {
   end
 
   def self.highest_score_from(words)
-    score_hash = build_score_hash(words)
-    sorted_score_hash = sort_score_hash(score_hash)
+    score_array = build_score_array(words)
 
-    highest_scoring_pair = sorted_score_hash.last
+    highest_scoring_pair = score_array.last
     highest_scoring_word = highest_scoring_pair.first
-    highest_score = highest_scoring_pair.last
+    highest_scoring_score = highest_scoring_pair.last
+    shortest_highest_scoring_pair = score_array.first
+    shortest_highest_scoring_word = score_array.first.first
 
-    first_highest_scoring_word = find_first_highest_scoring_word(score_hash, highest_score )
+    highest_scoring_word.length == 7 ? highest_scoring_word : shortest_highest_scoring_word
 
-    return first_highest_scoring_word.first if first_highest_scoring_word.first.length == highest_scoring_word.length
-    highest_scoring_word
   end
 
   private
@@ -37,18 +36,19 @@ LETTER_SCORE = {
     formatted_word.split("").inject(0) { |total,letter| total + LETTER_SCORE.fetch(letter) }
   end
 
-  def self.build_score_hash(words)
-    words.inject({}) do |h, (word)|
+  def self.build_score_array(words)
+    score_hash = words.inject({}) do |h, (word)|
       h[word] = score_word(word)
       h
     end
+
+    sorted_score_hash = sort_score_hash(score_hash)
+
+    highest_score = sorted_score_hash.values.last
+    sorted_score_hash.find_all { |k,v| v == highest_score}.sort_by { |k,v| k.length }
   end
 
   def self.sort_score_hash(score_hash)
-    score_hash.sort_by { |k,v| v }
-  end
-
-  def self.find_first_highest_scoring_word(score_hash, highest_score)
-    score_hash.find { |k,v| v == highest_score}
+    Hash[score_hash.sort_by { |k,v| v }]
   end
 end
