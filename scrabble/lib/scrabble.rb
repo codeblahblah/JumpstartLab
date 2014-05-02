@@ -13,7 +13,8 @@ LETTER_SCORE = {
   def self.score(word)
     return 0 if word == nil
     return 0 if word.empty?
-    score_word(word)
+    formatted_word = word.strip
+    score_word(formatted_word)
   end
 
   def self.highest_score_from(words)
