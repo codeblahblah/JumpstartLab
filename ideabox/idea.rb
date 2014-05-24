@@ -16,10 +16,14 @@ class Idea
   end
 
   def self.all
+    raw_ideas.map do |data|
+      new(data[:title], data[:description])
+    end
+  end
+
+  def self.raw_ideas
     database.transaction do |db|
       db['ideas'] || []
-    end.map do |data|
-      new(data[:title], data[:description])
     end
   end
 
