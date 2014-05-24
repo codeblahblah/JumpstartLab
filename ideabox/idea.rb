@@ -3,9 +3,9 @@ require 'yaml/store'
 class Idea
   attr_reader :title, :description
 
-  def initialize(title, description)
-    @title = title
-    @description = description
+  def initialize(attributes)
+    @title = attributes.fetch(:title)
+    @description = attributes.fetch(:description)
   end
 
   def save
@@ -17,7 +17,7 @@ class Idea
 
   def self.all
     raw_ideas.map do |data|
-      new(data[:title], data[:description])
+      new(data)
     end
   end
 
@@ -49,7 +49,7 @@ class Idea
 
   def self.find(id)
     raw_idea = find_raw_idea(id)
-    new(raw_idea[:title], raw_idea[:description])
+    new(raw_idea)
   end
 
   def self.update(id, data)
