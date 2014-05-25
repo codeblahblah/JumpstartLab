@@ -12,7 +12,7 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   get '/' do
-    erb :index, locals: {ideas: Idea.all}
+    erb :index, locals: {ideas: Idea.all, idea: Idea.new}
   end
 
   get '/:id/edit' do |id|
@@ -21,7 +21,7 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   post '/' do
-    idea = Idea.new(params['idea'])
+    idea = Idea.new(params[:idea])
     idea.save
     redirect '/'
   end
@@ -32,7 +32,8 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   put '/:id' do |id|
-    Idea.update(id.to_i, params['idea'])
+    params.inspect
+    Idea.update(id.to_i, params[:idea])
     redirect '/'
   end
 end

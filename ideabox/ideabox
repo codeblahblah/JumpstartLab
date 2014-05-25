@@ -1,14 +1,12 @@
 ---
 ideas:
-- :title: 
-  :description: 
-- :title: another
-  :description: "idea\r\n"
 - :title: F1 espionage
-  :description: 
-- :title: why
-  :description: 
-- :title: my
-  :description: my
-- :title: dessert
-  :description: candy, soda, and ice cream
+  :description: some text
+- :title: as
+  :description: zxzx
+- title: zxc
+  description: zcxzxc
+- title: zxcvzxv
+  description: zcxvxcv
+- title: this should
+  description: worka
