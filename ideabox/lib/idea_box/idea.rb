@@ -4,12 +4,22 @@ class Idea
   def initialize(attributes = {})
     @title = attributes["title"]
     @description = attributes["description"]
+    @rank = attributes["rank"]
   end
 
   def save
-    database.transaction do
-      database['ideas'] ||= []
-      database['ideas'] << { "title" => title, "description" => description }
-    end
+    IdeaStore.create(to_h)
+  end
+
+  def to_h
+    {
+      "title" => title,
+      "description" => description,
+      "rank" => rank
+    }
+  end
+
+  def like!
+    @rank += 1
   end
 end

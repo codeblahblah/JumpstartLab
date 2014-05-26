@@ -7,6 +7,11 @@ class IdeaBoxApp < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  configure do
+    register Sinatra::Reloader
+  end
+
+
   not_found do
     erb :error
   end
