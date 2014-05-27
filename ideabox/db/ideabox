@@ -1,9 +1,12 @@
 ---
 ideas:
-- title: games
-  description: sonic
-  rank: 4
-- title: music
-  description: listen to more Classical
-  rank: 5
-idea: []
+- title: diet
+  description: pizza all the time
+- title: diet
+  description: pizza all the time
+- title: exercise
+  description: play video games
+- title: dinner
+  description: pizza
+- title: dessert
+  description: candy, soda, and ice cream
