@@ -2,6 +2,7 @@
 ideas:
 - title: diet
   description: pizza all the time
+  rank: 3
 - title: diet
   description: pizza all the time
 - title: exercise
@@ -14,6 +15,7 @@ ideas:
   description: wear barefoot shoes
 - title: game
   description: tic tac toe
+  rank: 1
 - title: app
   description: social network for dogs
 - title: excursion
