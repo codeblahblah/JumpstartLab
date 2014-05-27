@@ -13,3 +13,13 @@ I, [2014-05-24T12:25:25.480758 #12336]  INFO -- : 0:  tilt (1.4.1) from /opt/box
 I, [2014-05-24T12:25:25.481929 #12336]  INFO -- : 0:  sinatra (1.4.5) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/sinatra-1.4.5.gemspec
 I, [2014-05-24T12:25:25.483117 #12336]  INFO -- : 0:  sinatra-contrib (1.4.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/sinatra-contrib-1.4.2.gemspec
 I, [2014-05-24T12:25:25.484167 #12336]  INFO -- : 0:  bundler (1.5.0) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/bundler-1.5.0.gemspec
+I, [2014-05-27T22:17:07.974622 #2690]  INFO -- : 0:  backports (2.5.3) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/backports-2.5.3.gemspec
+I, [2014-05-27T22:17:07.992840 #2690]  INFO -- : 0:  tilt (1.4.1) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/tilt-1.4.1.gemspec
+I, [2014-05-27T22:17:07.993618 #2690]  INFO -- : 0:  haml (4.0.3) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/haml-4.0.3.gemspec
+I, [2014-05-27T22:17:07.994301 #2690]  INFO -- : 0:  multi_json (1.10.0) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/multi_json-1.10.0.gemspec
+I, [2014-05-27T22:17:07.994977 #2690]  INFO -- : 0:  rack (1.5.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rack-1.5.2.gemspec
+I, [2014-05-27T22:17:08.012020 #2690]  INFO -- : 0:  rack-protection (1.5.3) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rack-protection-1.5.3.gemspec
+I, [2014-05-27T22:17:08.012683 #2690]  INFO -- : 0:  rack-test (0.6.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/rack-test-0.6.2.gemspec
+I, [2014-05-27T22:17:08.013299 #2690]  INFO -- : 0:  sinatra (1.4.5) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/sinatra-1.4.5.gemspec
+I, [2014-05-27T22:17:08.013918 #2690]  INFO -- : 0:  sinatra-contrib (1.4.2) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/sinatra-contrib-1.4.2.gemspec
+I, [2014-05-27T22:17:08.014508 #2690]  INFO -- : 0:  bundler (1.5.0) from /opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/specifications/bundler-1.5.0.gemspec

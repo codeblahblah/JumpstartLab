@@ -2,6 +2,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (2.5.3)
+    haml (4.0.3)
+      tilt
     multi_json (1.10.0)
     rack (1.5.2)
     rack-protection (1.5.3)
@@ -25,5 +27,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  haml
   sinatra
   sinatra-contrib
