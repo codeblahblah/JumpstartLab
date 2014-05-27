@@ -8,7 +8,9 @@ ideas:
   description: play video games
 - title: dinner
   description: pizza
+  rank: 3
 - title: dessert
   description: candy, soda, and ice cream
-- title: ''
-  description: ''
+- title: inspiration
+  description: read a book
+  rank: 2

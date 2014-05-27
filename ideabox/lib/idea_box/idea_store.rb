@@ -28,7 +28,7 @@ class IdeaStore
 
     @database ||= YAML::Store.new('db/ideabox')
     @database.transaction do
-      @database['idea'] ||= []
+      @database['ideas'] ||= []
     end
     @database
   end
