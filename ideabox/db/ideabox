@@ -1,24 +1,9 @@
 ---
 ideas:
-- title: diet
-  description: pizza all the time
-  rank: 3
-- title: diet
-  description: pizza all the time
-- title: exercise
-  description: play video games
-- title: dinner
-  description: pizza
-- title: dessert
-  description: candy, soda, and ice cream
-- title: get noticed
-  description: wear barefoot shoes
-- title: game
-  description: tic tac toe
-  rank: 1
-- title: app
-  description: social network for dogs
-- title: excursion
-  description: take everyone to the zoo
-- title: party
-  description: dance all night and all day
+- title: games
+  description: sonic
+  rank: 4
+- title: music
+  description: listen to more Classical
+  rank: 5
+idea: []
