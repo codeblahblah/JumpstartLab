@@ -1,0 +1,13 @@
+%form{action: "/#{idea.id}", method: "POST"}
+  %p
+    - if idea.id
+      Edit your Idea:
+    - else
+      Your Idea:
+  - if idea.id
+    %input{name: "_method", type: "hidden", value: "PUT"}/
+  %input{name: "idea[title]", type: "text", value: idea.title}/
+  %br/
+  %textarea{name: "idea[description]"}= idea.description
+  %br/
+  %input{type: "submit"}/
