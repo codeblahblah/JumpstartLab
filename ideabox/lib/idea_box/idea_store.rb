@@ -3,6 +3,16 @@ require_relative './idea'
 
 class IdeaStore
 
+  def self.database
+    return @database if @database
+
+    @database = YAML::Store.new('db/ideabox')
+    @database.transaction do
+      @database['ideas'] ||= []
+    end
+    @database
+  end
+
   def self.create(data)
     database.transaction do
       database['ideas'] << data
@@ -21,20 +31,6 @@ class IdeaStore
     database.transaction do |db|
       db['ideas'] || []
     end
-  end
-
-  def self.database
-    return @database if @database
-
-    @database ||= YAML::Store.new('db/ideabox')
-    @database.transaction do
-      @database['ideas'] ||= []
-    end
-    @database
-  end
-
-  def database
-    Idea.database
   end
 
   def self.delete(position)

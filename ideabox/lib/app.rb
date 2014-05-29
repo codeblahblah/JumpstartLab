@@ -22,7 +22,8 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   post '/' do
-    idea = IdeaStore.create(params[:idea])
+    idea = Idea.new(params[:idea])
+    idea.save
     redirect '/'
   end
 

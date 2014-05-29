@@ -1,18 +1,2 @@
 ---
-ideas:
-- title: diet
-  description: pizza all the time
-- title: diet
-  description: pizza all the time
-- title: exercise
-  description: play video games
-- title: dinner
-  description: pizza
-- title: dessert
-  description: candy, soda, and ice cream
-- title: inspiration
-  description: read a book
-  rank: 2
-- title: exercise
-  description: rubykoans
-  rank: 2
+ideas: []

@@ -7,6 +7,7 @@
   - if idea.id
     %input{name: "_method", type: "hidden", value: "PUT"}/
   %input{name: "idea[title]", type: "text", value: idea.title}/
+  %input{name: "idea[created_at]", type: "hidden", value: idea.created_at}/
   %br/
   %textarea{name: "idea[description]"}= idea.description
   %br/
