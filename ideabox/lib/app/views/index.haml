@@ -9,8 +9,44 @@
       = idea.title
       %br/
       = idea.description
+      %br/
+      Tagged with:
+      - idea.tags.each do |tag|
+        %a{href: "/tag/#{tag}"} #{tag}
+      %br/  
       %a{href: "/#{idea.id}/edit"} Edit
       %form{action: "/#{idea.id}", method: "POST"}
         %input{name: "_method", type: "hidden", value: "DELETE"}/
         %input{type: "submit", value: "delete"}/
+      
+
+%p
+  Hours of the day: 
+  %a{href: "/"} 00:00AM to 03:59AM
+  |
+  %a{href: "/"} 04:00AM to 07:59AM
+  |
+  %a{href: "/"} 08:00AM to 11:59AM
+  |
+  %a{href: "/"} 12:00PM to 15:59PM
+  |
+  %a{href: "/"} 16:00PM to 19:59PM
+  |
+  %a{href: "/"} 20:00PM to 11:59PM 
+
+%p
+  Days of the week:
+  %a{href: "/"} Mon
+  |
+  %a{href: "/"} Tue
+  |
+  %a{href: "/"} Wed
+  |
+  %a{href: "/"} Thu
+  |
+  %a{href: "/"} Fri
+  |
+  %a{href: "/"} Sat
+  |
+  %a{href: "/"} Sun
 
