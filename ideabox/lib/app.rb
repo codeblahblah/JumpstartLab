@@ -4,6 +4,8 @@ class IdeaBoxApp < Sinatra::Base
   set :method_override, true
   set :root, 'lib/app'
 
+  DAY_OF_THE_WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
   configure :development do
     register Sinatra::Reloader
   end
@@ -28,13 +30,11 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   get '/slot/:id' do |id|
-    "Viewing IDEAS by time slot!"
+    haml :show_by_slot, locals: {ideas: IdeaStore.find_by_time_slot(id.to_i), slot: id.to_i}
   end
 
   get '/day/:id' do |id|
-    haml :show_by_day, locals: {ideas: IdeaStore.find_by_day(id.to_i)}
-    #haml :show_by_day, locals: {ideas: IdeaStore.all}
-    # "Viewing IDEA by day!"
+    haml :show_by_day, locals: {ideas: IdeaStore.find_by_day(id.to_i), created_on: DAY_OF_THE_WEEK[id.to_i - 1] }
   end
 
   post '/' do

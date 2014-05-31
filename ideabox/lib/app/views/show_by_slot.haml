@@ -1,5 +1,5 @@
 %h1 Ideabox
-%h2 Showing all ideas on #{created_on}
+%h2 Showing all ideas in time slot ##{slot}
 %ul
   - if !ideas.empty?
     - ideas.each do |idea|
@@ -12,4 +12,4 @@
         - idea.tags.each do |tag|
           %a{href: "/tag/#{tag}"} #{tag}
   - else
-    No ideas for today
+    No ideas for this time slot
