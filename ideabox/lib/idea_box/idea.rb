@@ -7,7 +7,7 @@ class Idea
     @description = attributes["description"]
     @rank = attributes["rank"] || 0
     @id = attributes["id"]
-    @created_at = Time.now.to_s
+    @created_at = attributes["created_at"] || Time.now.to_s
     @tags = prepare_tags(attributes["tags"])
   end
 
@@ -20,7 +20,7 @@ class Idea
       "title" => title,
       "description" => description,
       "rank" => rank,
-      "created_at" => created_at, 
+      "created_at" => created_at,
       "tags" => tags
     }
   end

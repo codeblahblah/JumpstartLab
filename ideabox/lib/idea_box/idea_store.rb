@@ -1,4 +1,5 @@
 require 'yaml/store'
+require 'date'
 require_relative './idea'
 
 class IdeaStore
@@ -25,6 +26,12 @@ class IdeaStore
       ideas  << Idea.new(data.merge("id" => i))
     end
     ideas
+  end
+
+  def self.find_by_day(day)
+    all.select do |idea|
+      Date.parse(idea.created_at).strftime('%u').to_i == day
+    end
   end
 
   def self.raw_ideas

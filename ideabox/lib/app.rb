@@ -32,7 +32,9 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   get '/day/:id' do |id|
-    "Viewing IDEA by day!"
+    haml :show_by_day, locals: {ideas: IdeaStore.find_by_day(id.to_i)}
+    #haml :show_by_day, locals: {ideas: IdeaStore.all}
+    # "Viewing IDEA by day!"
   end
 
   post '/' do
