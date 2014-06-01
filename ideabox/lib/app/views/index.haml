@@ -13,15 +13,15 @@
       Tagged with:
       - idea.tags.each do |tag|
         %a{href: "/tag/#{tag}"} #{tag}
-      %br/  
+      %br/
       %a{href: "/#{idea.id}/edit"} Edit
       %form{action: "/#{idea.id}", method: "POST"}
         %input{name: "_method", type: "hidden", value: "DELETE"}/
         %input{type: "submit", value: "delete"}/
-      
+
 
 %p
-  Hours of the day: 
+  Hours of the day:
   %a{href: "/slot/0"} 00:00AM to 03:59AM
   |
   %a{href: "/slot/1"} 04:00AM to 07:59AM
@@ -32,7 +32,7 @@
   |
   %a{href: "/slot/4"} 16:00PM to 19:59PM
   |
-  %a{href: "/slot/5"} 20:00PM to 23:59PM 
+  %a{href: "/slot/5"} 20:00PM to 23:59PM
 
 %p
   Days of the week:

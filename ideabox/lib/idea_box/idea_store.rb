@@ -30,17 +30,17 @@ class IdeaStore
   end
 
   def self.find_by_day(day)
-    all.select do |idea|
-      Date.parse(idea.created_at).strftime('%u').to_i == day
-    end
+    all.select { |idea| DateTime.parse(idea.created_at).wday + 1 == day }
   end
 
   def self.find_by_time_slot(id)
     slot_start = SLOTS[id]
     slot_end = SLOTS[id] + 3
-    all.select do |idea|
-      DateTime.parse(idea.created_at).hour.between?(slot_start, slot_end) && DateTime.parse(idea.created_at).min.between?(0, 59)
-    end
+    all.select { |idea| DateTime.parse(idea.created_at).hour.between?(slot_start, slot_end) }
+  end
+
+  def self.find_by_tag(tag)
+    all.select { |idea| idea.tags.include?(tag) }
   end
 
   def self.raw_ideas
