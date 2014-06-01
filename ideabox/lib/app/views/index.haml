@@ -12,7 +12,7 @@
       %br/
       Tagged with:
       - idea.tags.each do |tag|
-        %a{href: "/tag/#{tag}"} #{tag}
+        %a{href: "/tags/#{tag}"} #{tag}
       %br/
       %a{href: "/#{idea.id}/edit"} Edit
       %form{action: "/#{idea.id}", method: "POST"}

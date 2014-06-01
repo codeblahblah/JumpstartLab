@@ -37,7 +37,7 @@ class IdeaBoxApp < Sinatra::Base
     haml :show_by_day, locals: {ideas: IdeaStore.find_by_day(id.to_i), created_on: DAY_OF_THE_WEEK[id.to_i - 1] }
   end
 
-  get '/tag/:id' do |id|
+  get '/tags/:id' do |id|
     haml :show_by_tag, locals: {ideas: IdeaStore.find_by_tag(id), tag: id }
   end
 
