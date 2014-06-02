@@ -1,15 +1,6 @@
-%h1 Ideabox
 %h2 Showing all ideas on #{created_on}
 %ul
   - if !ideas.empty?
-    - ideas.each do |idea|
-      %li
-        = idea.title
-        %br/
-        = idea.description
-        %br/
-        Tagged with:
-        - idea.tags.each do |tag|
-          %a{href: "/tags/#{tag}"} #{tag}
+    = haml :tags, locals: {ideas: ideas}
   - else
     No ideas for today

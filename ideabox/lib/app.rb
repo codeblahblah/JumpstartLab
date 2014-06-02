@@ -4,7 +4,7 @@ class IdeaBoxApp < Sinatra::Base
   set :method_override, true
   set :root, 'lib/app'
 
-  DAY_OF_THE_WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  DAY_OF_THE_WEEK = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
   configure :development do
     register Sinatra::Reloader
@@ -34,7 +34,7 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   get '/day/:id' do |id|
-    haml :show_by_day, locals: {ideas: IdeaStore.find_by_day(id.to_i), created_on: DAY_OF_THE_WEEK[id.to_i - 1] }
+    haml :show_by_day, locals: {ideas: IdeaStore.find_by_day(id.to_i), created_on: DAY_OF_THE_WEEK[id.to_i] }
   end
 
   get '/tags/:id' do |id|

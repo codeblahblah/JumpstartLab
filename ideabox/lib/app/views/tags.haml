@@ -1,0 +1,9 @@
+- ideas.each do |idea|
+  %li
+    = idea.title
+    %br/
+    = idea.description
+    %br/
+    Tagged with:
+    - idea.tags.each do |tag|
+      %a{href: "/tags/#{tag}"} #{tag}

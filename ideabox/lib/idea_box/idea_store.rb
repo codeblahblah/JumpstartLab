@@ -30,7 +30,7 @@ class IdeaStore
   end
 
   def self.find_by_day(day)
-    all.select { |idea| DateTime.parse(idea.created_at).wday + 1 == day }
+    all.select { |idea| DateTime.parse(idea.created_at).wday == day }
   end
 
   def self.find_by_time_slot(id)
