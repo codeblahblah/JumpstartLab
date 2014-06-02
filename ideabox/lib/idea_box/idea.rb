@@ -34,6 +34,8 @@ class Idea
   end
 
   def prepare_tags(tags)
-    "App store unique ideas".downcase.split
+    exclusion_list = ["of", "the"]
+    filtered_tags = "App app store of the unique ideas".downcase.split.uniq
+    unique_tags = filtered_tags.reject { |tag| exclusion_list.include?(tag)}
   end
 end
